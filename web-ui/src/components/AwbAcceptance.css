@@ -1,0 +1,469 @@
+/* ===== AWB CONTAINER - MOD BAZLI ===== */
+
+/* Desktop Container (≥1024px) */
+.awb-container.awb-desktop {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-web);
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+/* Mobile Container (<1024px) */
+.awb-container.awb-mobile {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 var(--spacing-md);
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+/* ===== AWB HEADER ===== */
+.awb-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl) 0;
+}
+
+.awb-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-sm) 0;
+  line-height: 1.25;
+}
+
+.awb-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== FORM CONTAINER ===== */
+.awb-form {
+  position: relative;
+}
+
+/* Desktop form için padding-bottom yok */
+.awb-desktop .awb-form {
+  padding-bottom: 0;
+}
+
+/* Mobile form için sticky CTA alanı */
+.awb-mobile .awb-form {
+  padding-bottom: 80px;
+}
+
+/* ===== FORM SECTIONS ===== */
+.form-section {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-primary);
+}
+
+.required-section {
+  border-left: 4px solid var(--success-color);
+}
+
+.optional-section {
+  border-left: 4px solid var(--warning-color);
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+/* Mobile'da collapsible header */
+.section-header.collapsible {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.section-header.collapsible:hover {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  margin: calc(-1 * var(--spacing-sm));
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.section-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.toggle-icon
+
+/* ===== BADGES ===== */
+.required-badge {
+  background: var(--success-color);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.optional-badge {
+  background: var(--warning-color);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* ===== FORM GRID - MOD BAZLI ===== */
+
+/* Desktop Grid - Çoklu kolon */
+.desktop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Mobile Grid - Tek kolon */
+.mobile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+/* ===== FORM GROUPS ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.form-label {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.required {
+  color: var(--error-color);
+  font-weight: 700;
+}
+
+/* ===== FORM INPUTS ===== */
+.form-input,
+
+
+.form-input:focus,
+
+
+.form-input.error,
+.form-select.error {
+  border-color: var(--error-color);
+  background: #fef2f2;
+}
+
+.form-input::placeholder,
+
+
+/* ===== ERROR MESSAGES ===== */
+.error-message {
+  color: var(--error-color);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: var(--spacing-xs);
+}
+
+/* ===== FIELD HELP ===== */
+.field-help {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  line-height: 1.3;
+  margin-top: var(--spacing-xs);
+}
+
+/* ===== OPTIONAL FIELDS ===== */
+.optional-fields {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CTA BUTTONS - MOD BAZLI ===== */
+
+/* Desktop CTA - Normal butonlar */
+.desktop-cta {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+/* Mobile Sticky CTA - Sadece mobile'da */
+.mobile-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-primary);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: var(--spacing-md) var(--spacing-md);
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.cta-content {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-secondary);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .awb-container.awb-mobile {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .awb-title {
+    font-size: var(--font-size-3xl);
+    line-height: 1.3;
+  }
+  
+  .awb-subtitle {
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+  }
+  
+  .form-section {
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .section-header {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-lg);
+    line-height: 1.3;
+  }
+  
+  .mobile-grid {
+    gap: var(--spacing-md);
+  }
+  
+  .form-input,
+  
+  
+  .mobile-sticky-cta {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-base);
+    min-height: 44px;
+  }
+}
+
+/* Small Mobile (<768px) */
+@media (max-width: 767px) {
+  .awb-container.awb-mobile {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .awb-header {
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .awb-title {
+    font-size: var(--font-size-2xl);
+    line-height: 1.3;
+  }
+  
+  .awb-subtitle {
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+  }
+  
+  .form-section {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .section-header {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-base);
+    line-height: 1.3;
+  }
+  
+  .mobile-grid {
+    gap: var(--spacing-sm);
+  }
+  
+  .form-input,
+  
+  
+  .form-label {
+    font-size: var(--font-size-sm);
+    line-height: 1.3;
+  }
+  
+  .field-help {
+    font-size: var(--font-size-xs);
+    line-height: 1.3;
+  }
+  
+  .error-message {
+    font-size: var(--font-size-xs);
+    line-height: 1.3;
+  }
+  
+  .mobile-sticky-cta {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    min-height: 44px;
+  }
+
+  .required-badge,
+  .optional-badge {
+    font-size: 10px;
+    padding: var(--spacing-xs);
+    line-height: 1.2;
+  }
+}
+
+/* ===== DESKTOP SPESİFİK STİLLER ===== */
+
+/* Desktop'ta sticky CTA gizli */
+.awb-desktop .mobile-sticky-cta {
+  display: none;
+}
+
+/* Desktop'ta normal CTA görünür */
+.awb-desktop .desktop-cta {
+  display: flex;
+}
+
+/* ===== MOBILE SPESİFİK STİLLER ===== */
+
+/* Mobile'da normal CTA gizli */
+.awb-mobile .desktop-cta {
+  display: none;
+}
+
+/* Mobile'da sticky CTA görünür */
+.awb-mobile .mobile-sticky-cta {
+  display: block;
+}
+
+/* ===== FORM SECTIONS CONTAINER ===== */
+.form-sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* ===== UTILITY CLASSES ===== */
+

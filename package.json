@@ -1,0 +1,32 @@
+{
+  "name": "air-cargo-digital-twin-test-lab",
+  "version": "1.0.0",
+  "description": "Hava Kargo Test & Simülasyon Merkezi",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd mock-api && npm install && cd web-ui && npm install",
+    "start:api": "cd mock-api && npm start",
+    "start:ui": "cd web-ui && npm start",
+    "test:web": "cd web-ui && npm run test",
+    "test:appium": "cd appium-tests && npm test",
+    "test:mobile": "npm run test:appium",
+    "test:all": "npm run test:web && npm run test:mobile",
+    "build": "cd web-ui && npm run build",
+    "build:android:debug": "cd cargo-mobile-native/webview-android && ./gradlew assembleDebug",
+    "build:android:release": "cd cargo-mobile-native/webview-android && ./gradlew assembleRelease",
+    "dev": "concurrently \"npm run start:api\" \"npm run start:ui\""
+  },
+  "keywords": [
+    "air-cargo",
+    "cargo",
+    "digital-twin",
+    "testing",
+    "appium"
+  ],
+  "author": "Air Cargo Test Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {}
+}

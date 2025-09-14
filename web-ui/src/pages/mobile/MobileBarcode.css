@@ -1,0 +1,2983 @@
+/* Mobile Barcode Styles - Spesifikasyona Göre */
+
+/* Bağlantı Durumu Göstergesi - Sadece Appium */
+.mobile-connection-status-bar {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-left: 4px solid #10b981;
+}
+
+.connection-status-items {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.connection-status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.connection-status-label {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.connection-status-value {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.connection-status-value.connected {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.connection-status-value.disconnected {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Form Title Override - ULD/AWB ile aynı stil */
+.mobile-page .form-header .form-title {
+  font-weight: 600 !important; /* ULD/AWB gibi daha ince */
+  font-size: 28px !important; /* ULD/AWB default boyutu */
+  color: #1f2937 !important; /* Daha koyu gri */
+  text-shadow: none !important; /* Shadow kaldır */
+  line-height: 1.2 !important; /* ULD/AWB line-height */
+}
+
+.mobile-page .form-header .form-subtitle {
+  color: #6b7280 !important; /* Açık gri */
+  font-weight: 400 !important;
+}
+
+/* Manuel Giriş Stilleri */
+.mobile-manual-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.mobile-manual-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.mobile-manual-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-manual-barcode-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #111827;
+  height: 48px; /* ULD form ile aynı */
+}
+
+.mobile-manual-barcode-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mobile-manual-test-btn {
+  width: 60%; /* Genişlik kısaltıldı */
+  min-height: 48px; /* ULD kaydet ile aynı */
+  padding: 12px 16px; /* ULD kaydet ile aynı */
+  border: none;
+  border-radius: 6px; /* ULD kaydet ile aynı */
+  font-size: 14px; /* ULD kaydet ile aynı */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease; /* ULD kaydet ile aynı */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Hep aktif mavi - disabled durumda da mavi */
+  background: #3b82f6 !important;
+  color: white !important;
+}
+
+.mobile-manual-test-btn:hover {
+  background: #2563eb !important; /* Hover her zaman koyu mavi */
+}
+
+.mobile-manual-test-btn:disabled {
+  background: #3b82f6 !important; /* Disabled durumda da mavi kalır */
+  color: white !important;
+  cursor: pointer !important; /* Hep aktif görünüm */
+  opacity: 1 !important; /* Hiç soluklaşmasın */
+}
+
+.mobile-manual-error {
+  margin-top: -8px; /* Input'un altında, buton'un üstünde */
+  color: #dc2626;
+  font-size: 12px; /* ULD form ile aynı */
+  font-weight: 500;
+}
+
+/* Test Barkodları Listesi Stilleri */
+.mobile-test-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.mobile-test-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.mobile-test-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-test-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.mobile-test-item:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-test-item.valid {
+  border-color: #22c55e;
+}
+
+.mobile-test-item.invalid {
+  border-color: #ef4444;
+}
+
+.mobile-test-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-test-type {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-width: 40px;
+  text-align: center;
+}
+
+.mobile-test-type.valid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.mobile-test-type.invalid {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.mobile-test-code {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.mobile-test-status {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mobile-test-item.valid .mobile-test-status {
+  color: #22c55e;
+}
+
+.mobile-test-item.invalid .mobile-test-status {
+  color: #ef4444;
+}
+
+/* Event Log Stilleri */
+.mobile-event-log-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.mobile-event-log-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.mobile-event-log-content {
+  background: #1f2937;
+  color: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mobile-event-log-entry {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 4px;
+  padding: 2px 0;
+}
+
+.mobile-event-log-time {
+  color: #9ca3af;
+  min-width: 80px;
+}
+
+.mobile-event-log-message {
+  flex: 1;
+}
+
+.mobile-event-log-entry.success .mobile-event-log-message {
+  color: #10b981;
+}
+
+.mobile-event-log-entry.error .mobile-event-log-message {
+  color: #ef4444;
+}
+
+.mobile-event-log-entry.info .mobile-event-log-message {
+  color: #3b82f6;
+}
+
+/* Mobil Testini Bitir Butonu */
+.mobile-complete-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.mobile-complete-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  min-width: 200px;
+}
+
+.mobile-complete-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+.mobile-complete-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Senaryo Adımları Accordion Stilleri */
+.mobile-scenario-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.mobile-scenario-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.mobile-scenario-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-accordion-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+}
+
+.mobile-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-accordion-header:hover {
+  background-color: #f9fafb;
+}
+
+.mobile-accordion-header:focus {
+  outline: none;
+  background-color: #f3f4f6;
+}
+
+.mobile-step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.mobile-step-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.mobile-accordion-chevron {
+  font-size: 16px;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+  margin-left: 8px;
+}
+
+.mobile-accordion-content {
+  padding: 16px;
+  border-top: 1px solid #f3f4f6;
+  background: #f9fafb;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.mobile-accordion-content p {
+  margin: 0;
+}
+
+/* Mobile responsive için accordion */
+@media (max-width: 768px) {
+  .mobile-step-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    margin-right: 10px;
+  }
+  
+  .mobile-step-title {
+    font-size: 15px;
+  }
+  
+  .mobile-accordion-content {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+  
+  .mobile-accordion-header {
+    padding: 12px 16px;
+  }
+}
+
+/* Web UI Stili Form Header - Mobil Uyarlaması */
+.form-header.mobile {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title.mobile {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-subtitle.mobile {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Mobil Header Info Stilleri */
+.mobile-header-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.mobile-connection-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-online, .status-offline {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Genel scroll ayarları */
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Floating Action Button'u gizle */
+.floating-action-button,
+.fab,
+[class*="fab"],
+[class*="floating"],
+[class*="action-button"] {
+  display: none !important;
+}
+
+/* Browser'ın kendi floating action button'larını gizle */
+[data-testid*="fab"],
+[aria-label*="floating"],
+[aria-label*="action"] {
+  display: none !important;
+}
+
+.mobile-barcode {
+  padding: 16px;
+  background: #f8f9fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Scroll davranışını düzelt */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/* Barkod Simülasyonu Başlığı */
+.mobile-simulator-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 20px 16px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mobile-simulator-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  display: block;
+}
+
+.mobile-simulator-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Kart Tasarımı - Web ile aynı */
+.mobile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px 0;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 8px;
+}
+
+/* 1. Kontrol Paneli - Mod Toggle */
+.mobile-mode-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  min-height: 48px;
+}
+
+.mobile-mode-label {
+  font-size: 15px;
+  color: #374151;
+  font-weight: 400;
+}
+
+.mobile-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+  min-width: 36px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.mobile-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #D1D5DB;
+  transition: all 0.18s ease-out;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  transition: all 0.18s ease-out;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .mobile-toggle-slider {
+  background-color: #22C55E;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+input:checked + .mobile-toggle-slider:before {
+  transform: translateX(16px);
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-toggle-switch:disabled .mobile-toggle-slider {
+  background-color: #E5E7EB;
+  opacity: 0.6;
+}
+
+.mobile-toggle-switch:disabled .mobile-toggle-slider:before {
+  background-color: #F3F4F6;
+}
+
+.mobile-toggle-switch input:focus + .mobile-toggle-slider {
+  box-shadow: 0 0 0 2px #3B82F6;
+}
+
+/* Sayaçlar */
+.mobile-status-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mobile-status-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.mobile-status-card-full {
+  grid-column: 1 / -1;
+}
+
+.mobile-status-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.mobile-status-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Aksiyon Butonları */
+.mobile-control-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.mobile-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mobile-barcode-chip.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.mobile-input.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.mobile-btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.mobile-btn-primary:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.mobile-btn-outline {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.mobile-btn-outline:hover:not(:disabled) {
+  background: #f9fafb;
+}
+
+.mobile-btn-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.mobile-btn-danger:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.mobile-btn-main {
+  font-size: 16px;
+  padding: 16px;
+}
+
+/* 2. Barkod Alanı */
+.mobile-barcode-section {
+  margin-bottom: 20px;
+}
+
+.mobile-barcode-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px 0;
+}
+
+.mobile-barcode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.mobile-barcode-chip {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.mobile-barcode-chip:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.mobile-barcode-chip.valid {
+  background: #f0fdf4;
+  border-color: #22c55e;
+}
+
+.mobile-barcode-chip.invalid {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.mobile-barcode-chip.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.mobile-barcode-chip-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-barcode-chip-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  word-break: break-all;
+}
+
+/* Manuel Giriş */
+.mobile-manual-section {
+  margin-bottom: 20px;
+}
+
+.mobile-manual-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px 0;
+}
+
+.mobile-input-container {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.mobile-input {
+  flex: 1;
+  padding: 12px 16px; /* Web ile aynı padding */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  background-color: white;
+  height: 48px; /* Web ile aynı yükseklik */
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.mobile-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.mobile-input.error {
+  border-color: #ef4444;
+}
+
+.mobile-input-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.mobile-btn-test {
+  min-width: 80px;
+  padding: 12px 16px;
+}
+
+/* AWB Form Modal */
+.mobile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.mobile-modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.mobile-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.mobile-modal-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.mobile-modal-close:hover {
+  background: #f3f4f6;
+}
+
+.mobile-awb-form {
+  padding: 20px;
+}
+
+.mobile-form-section {
+  margin-bottom: 24px;
+}
+
+.mobile-form-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.mobile-form-group {
+  margin-bottom: 12px; /* Web ile aynı dikey aralık */
+}
+
+.mobile-form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.mobile-form-row .mobile-form-group {
+  flex: 1;
+  margin-bottom: 12px; /* Web ile aynı dikey aralık */
+}
+
+.mobile-form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.required {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.mobile-form-help {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.mobile-form-error {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.mobile-input.error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.mobile-input.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Select dropdown stilleri */
+select.mobile-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+  background-color: white;
+  width: 100%;
+  height: 48px; /* Web ile aynı yükseklik */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  padding-left: 12px;
+}
+
+select.mobile-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+select.mobile-input option {
+  padding: 8px 12px;
+  background: white;
+  color: #374151;
+}
+
+/* Input with unit stilleri */
+.mobile-input-with-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-input-with-unit .mobile-input {
+  padding-right: 40px;
+  flex: 1;
+}
+
+.mobile-input-unit {
+  position: absolute;
+  right: 12px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mobile-form-toggle {
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 14px;
+  padding: 12px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.mobile-advanced-fields {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.mobile-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+}
+
+.mobile-btn-full {
+  flex: 1;
+  min-width: 120px;
+}
+
+.mobile-btn-secondary {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.mobile-btn-secondary:hover {
+  background: #4b5563;
+  border-color: #4b5563;
+  transform: translateY(-1px);
+}
+
+.mobile-btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* AWB Form - Responsive */
+@media (max-width: 480px) {
+  .mobile-form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .mobile-btn-full,
+  .mobile-btn-secondary {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .mobile-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .mobile-form-row .mobile-form-group {
+    margin-bottom: 16px;
+  }
+}
+
+/* Dropdown Styles */
+.mobile-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.mobile-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+.mobile-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-dropdown-code {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+  min-width: 40px;
+  margin-right: 12px;
+}
+
+.mobile-dropdown-details {
+  flex: 1;
+}
+
+.mobile-dropdown-city {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.mobile-dropdown-country {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.mobile-select-trigger {
+  height: 48px;
+  font-size: 16px;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: white;
+  color: #111827;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.mobile-select-trigger:hover {
+  border-color: #9ca3af;
+}
+
+.mobile-select-trigger:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mobile-select-trigger.error {
+  border-color: #dc2626;
+}
+
+.mobile-select-value {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-select-value:empty::before {
+  content: 'Havalimanı seçin';
+  color: #9ca3af;
+}
+
+.mobile-dropdown-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mobile-dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.mobile-dropdown-list {
+  position: relative;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  z-index: 10000;
+  max-height: 400px;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.mobile-dropdown-search {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.mobile-dropdown-search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.mobile-dropdown-search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mobile-dropdown-options {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mobile-dropdown-option {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s;
+}
+
+.mobile-dropdown-option:hover {
+  background-color: #f3f4f6;
+}
+
+.mobile-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.mobile-dropdown-option-city {
+  font-weight: 500;
+  color: #111827;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.mobile-dropdown-option-airport {
+  font-size: 12px;
+  color: #6b7280;
+  display: block;
+}
+
+/* Date Input Styles */
+.mobile-date-input {
+  height: 48px !important;
+  font-size: 16px !important;
+  padding: 12px 16px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  background-color: white !important;
+  color: #111827 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.mobile-date-input:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Senaryo Adımları */
+.mobile-scenario-section {
+  margin-top: 20px;
+}
+
+.mobile-scenario-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 12px 0;
+}
+
+.mobile-scenario-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-accordion-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mobile-accordion-header {
+  width: 100%;
+  background: #f9fafb;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-accordion-header:hover {
+  background: #f3f4f6;
+}
+
+.mobile-step-badge {
+  width: 24px;
+  height: 24px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.mobile-step-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.mobile-accordion-chevron {
+  font-size: 12px;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.mobile-accordion-content {
+  padding: 12px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobile-accordion-content p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Kontrol Paneli - Çerçeveli Kart */
+.mobile-control-panel {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Section */
+.mobile-toggle-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobile-toggle-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Sayaç Kutuları - 3 eşit genişlikte yan yana */
+.mobile-counters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mobile-counter-box {
+  flex: 1;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-counter-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.mobile-counter-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Online Mode Toggle - Eski stil */
+.mobile-online-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-mode-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-mode-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.mobile-mode-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-mode-badge.online {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.mobile-mode-badge.offline {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.mobile-mode-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.mobile-toggle {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  background: #e5e7eb;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-toggle.on {
+  background: #10b981;
+  box-shadow: inset 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.mobile-toggle.off {
+  background: #9ca3af;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-toggle-handle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-toggle.on .mobile-toggle-handle {
+  transform: translateX(24px);
+}
+
+.mobile-toggle:hover .mobile-toggle-handle {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Action Buttons - Kontrol Paneli İçinde */
+.mobile-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-btn-scan {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.mobile-btn-scan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+.mobile-btn-icon {
+  font-size: 20px;
+}
+
+.mobile-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mobile-btn.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.mobile-btn.loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.mobile-btn.loading:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Test Barcodes - Düzenli Grid */
+.mobile-test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.mobile-test-card {
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-test-card.valid {
+  border-color: #10b981;
+  background: #f0fdf4;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.mobile-test-card.invalid {
+  border-color: #ef4444;
+  background: #fef2f2;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.mobile-test-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-test-card.valid:hover {
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.mobile-test-card.invalid:hover {
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+.mobile-test-code {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+.mobile-test-status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Manuel Barkod Girişi - Profesyonel Tasarım */
+.mobile-manual-form {
+  margin-top: 15px;
+}
+
+.mobile-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.mobile-input-field {
+  flex: 1;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 56px;
+}
+
+.mobile-input-field:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.mobile-input-field.error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.mobile-test-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 56px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.mobile-test-btn.active {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.mobile-test-btn.disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.mobile-test-btn.active:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+.mobile-form-error {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.mobile-format-info {
+  margin-top: 12px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.mobile-format-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.mobile-format-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.mobile-format-item {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  padding: 4px 8px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+}
+
+.mobile-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mobile-input.error {
+  border-color: #ef4444;
+}
+
+.mobile-form-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .mobile-barcode {
+    padding: 12px;
+  }
+  
+  .connection-status-items {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .mobile-connection-status-bar {
+    padding: 12px 16px;
+  }
+  
+  .mobile-test-barcodes {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile-test-column-title {
+    font-size: 13px;
+  }
+  
+  .mobile-btn-scan {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+  
+  .mobile-online-mode {
+    padding: 12px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .mobile-mode-info {
+    justify-content: space-between;
+  }
+  
+  .mobile-mode-label {
+    font-size: 14px;
+  }
+  
+  .mobile-mode-badge {
+    padding: 4px 12px;
+    font-size: 11px;
+  }
+  
+  .mobile-toggle {
+    width: 48px;
+    height: 28px;
+    align-self: center;
+  }
+  
+  .mobile-toggle-handle {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .mobile-toggle.online .mobile-toggle-handle {
+    transform: translateX(20px);
+  }
+  
+  .mobile-control-panel {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .mobile-counters {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .mobile-test-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile-input-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .mobile-test-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .mobile-format-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Yeni Tasarım Stilleri */
+
+/* Barkod Listesi - Satır Tasarımı */
+.mobile-test-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-test-row {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid;
+  background: white;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.mobile-test-row.valid {
+  background: white;
+  border-color: #d1d5db;
+}
+
+.mobile-test-row.invalid {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.mobile-test-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mobile-test-row.valid .mobile-test-icon {
+  color: #16a34a;
+}
+
+.mobile-test-row.invalid .mobile-test-icon {
+  color: #dc2626;
+}
+
+.mobile-test-content {
+  flex: 1;
+}
+
+.mobile-test-code {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.mobile-load-more {
+  padding: 12px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Format Chips */
+.mobile-format-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mobile-format-chip {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #d1d5db;
+}
+
+/* Section Subtitle */
+.mobile-section-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+/* Mobil Toggle - Çevrimiçi / Çevrimdışı */
+.mobile-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: white;
+  margin: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 12px;
+}
+
+.mobile-toggle-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.mobile-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-toggle-switch {
+  position: relative;
+  width: 48px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-toggle-switch.online {
+  background-color: #10b981;
+}
+
+.mobile-toggle-switch.offline {
+  background-color: #6b7280;
+}
+
+.mobile-toggle-handle {
+  position: absolute;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-toggle-switch.online .mobile-toggle-handle {
+  transform: translateX(26px);
+}
+
+.mobile-toggle-switch.offline .mobile-toggle-handle {
+  transform: translateX(2px);
+}
+
+.mobile-toggle-status {
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.mobile-toggle-container .mobile-toggle-wrapper .mobile-toggle-status {
+  color: #374151;
+}
+
+/* Toggle Container - Temizlenmiş */
+.mobile-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 20px 20px 24px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 44x44px Hit Area - Mobil dokunma için */
+.mobile-toggle-hit-area {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px;
+  transition: background-color 0.2s ease;
+  /* Kaydırma çakışmasını önle */
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  position: relative;
+  z-index: 10;
+}
+
+.mobile-toggle-hit-area:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-toggle-hit-area:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.mobile-toggle-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.mobile-toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-toggle-switch.inactive {
+  background-color: #cccccc !important;
+}
+
+.mobile-toggle-switch.active {
+  background-color: #28a745 !important;
+}
+
+.mobile-toggle-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+}
+
+.mobile-toggle-switch.inactive .mobile-toggle-handle {
+  transform: translateX(0px) !important; /* Offline = false (gri) - Sol pozisyon */
+}
+
+.mobile-toggle-switch.active .mobile-toggle-handle {
+  transform: translateX(24px) !important; /* Offline = true (yeşil) - Sağ pozisyon */
+}
+
+/* Durum Rozeti */
+.mobile-status-badge {
+  text-align: center;
+  margin: 0 16px 16px 16px;
+}
+
+/* ================================================== */
+/* Mobil Modal Stilleri - Kuyruğu Temizle */
+/* ================================================== */
+
+.mobile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.mobile-modal-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-modal-header {
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.mobile-modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mobile-modal-body {
+  padding: 20px 24px;
+}
+
+.mobile-modal-text {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-modal-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px 24px;
+}
+
+.mobile-modal-btn {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-modal-btn-secondary {
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+}
+
+.mobile-modal-btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.mobile-modal-btn-secondary:active {
+  background: #f3f4f6;
+}
+
+.mobile-modal-btn-danger {
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.mobile-modal-btn-danger:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+.mobile-modal-btn-danger:active {
+  background: #b91c1c;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Modal Responsive */
+@media (max-width: 480px) {
+  .mobile-modal-overlay {
+    padding: 16px;
+  }
+  
+  .mobile-modal-buttons {
+    flex-direction: column;
+  }
+  
+  .mobile-modal-btn {
+    width: 100%;
+  }
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-indicator.online {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.status-indicator.offline {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* Sayaçlar - Web ile Aynı Kart Yapısı */
+.mobile-stats-container {
+  display: flex;
+  gap: 16px;
+  margin: 16px;
+}
+
+.mobile-stat-card {
+  flex: 1;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.mobile-stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Barkod Listesi - Kart Tasarımı (Override) */
+.mobile-test-row {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 48px !important;
+  padding: 16px !important;
+  border-radius: 12px !important;
+  border: 2px solid !important;
+  background: white !important;
+  text-align: left !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s ease !important;
+}
+
+.mobile-test-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-test-row.valid {
+  background: white !important;
+  border-color: #10b981 !important;
+}
+
+.mobile-test-row.invalid {
+  background: #fef2f2 !important;
+  border-color: #ef4444 !important;
+}
+
+/* Tüm Mobile Section'lar - Profesyonel Sabit Boşluk */
+.mobile-section {
+  margin-bottom: 24px !important;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.mobile-section:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Manuel Barkod Girişi - Ekstra Üst Boşluk */
+.manual-input-section {
+  margin-top: 32px !important; 
+  margin-bottom: 24px !important;
+}
+
+/* Manuel Barkod Girişi - Temiz ve Düzenli */
+.mobile-manual-form {
+  margin-top: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.mobile-input-field {
+  padding: 16px;
+  font-size: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  background: white;
+  min-height: 50px;
+}
+
+.mobile-input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.mobile-input-field.error {
+  border-color: #ef4444;
+}
+
+/* Format Chips - Temiz Görünüm */
+.mobile-format-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.mobile-format-chip {
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
+  font-family: monospace;
+}
+
+/* Section Başlıkları - Profesyonel */
+.mobile-section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.mobile-section-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+/* Accordion - Step Tasarımı */
+.mobile-accordion-header {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-accordion-header:hover {
+  background: #f3f4f6;
+}
+
+.mobile-step-badge {
+  background: #3b82f6;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.mobile-step-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  flex: 1;
+}
+
+/* Buton Stilleri - Override */
+.mobile-btn-full {
+  width: calc(100% - 32px) !important;
+  margin: 8px 16px !important;
+  padding: 16px !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.mobile-btn-primary {
+  background: #3b82f6 !important;
+  color: white !important;
+}
+
+.mobile-btn-primary:hover:not(:disabled) {
+  background: #2563eb !important;
+}
+
+.mobile-btn-primary:disabled {
+  background: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+.mobile-btn-secondary {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  border: 2px solid #d1d5db !important;
+}
+
+.mobile-btn-secondary:hover:not(:disabled) {
+  background: #e5e7eb !important;
+}
+
+.mobile-btn-secondary:disabled {
+  background: #f9fafb !important;
+  color: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+/* Son Tasarım - Sade ve Temiz */
+
+/* 1. Kontrol Paneli - 3 Kutucuk */
+.mobile-control-stats {
+  display: flex;
+  gap: 12px;
+  margin: 20px 20px 24px 20px; /* Sabit professional spacing */
+  flex-wrap: wrap;
+}
+
+.mobile-stat-box {
+  flex: 1;
+  min-width: 100px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.mobile-stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.mobile-stat-title {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+
+/* 2. Aksiyon Butonları */
+.mobile-action-section {
+  margin: 20px 20px 24px 20px; /* Sabit professional spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-action-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-action-primary {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.mobile-action-primary:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.mobile-action-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.mobile-action-secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.mobile-action-danger {
+  background: white;
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.mobile-action-danger:hover:not(:disabled) {
+  background: #fef2f2;
+}
+
+.mobile-action-btn.disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.mobile-action-btn.disabled:hover {
+  background: #f9fafb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 3. Test Barkodları - Sade Liste */
+.mobile-test-simple-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-test-simple-row {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-test-simple-row.valid {
+  border-color: #10b981;
+}
+
+.mobile-test-simple-row.invalid {
+  border-color: #ef4444;
+}
+
+.mobile-test-simple-row:hover {
+  background: #f9fafb;
+}
+
+.mobile-test-simple-icon {
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 20px;
+  text-align: center;
+}
+
+.mobile-test-simple-row.valid .mobile-test-simple-icon {
+  color: #10b981;
+}
+
+.mobile-test-simple-row.invalid .mobile-test-simple-icon {
+  color: #ef4444;
+}
+
+.mobile-test-simple-text {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* 4. Manuel Barkod Girişi - ULD Kaydet Gibi Mavi */
+.mobile-manual-btn {
+  width: 100%;
+  padding: 14px;
+  background: #3b82f6; /* ULD Kaydet gibi mavi */
+  color: white;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.mobile-manual-btn:hover:not(:disabled) {
+  background: #2563eb; /* Daha koyu mavi hover */
+  border-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.mobile-manual-btn.disabled {
+  background: #3b82f6; /* Mavi kalır ama soluk */
+  color: rgba(255, 255, 255, 0.7);
+  border-color: #3b82f6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+  opacity: 0.6;
+}
+
+/* Barkod Simülasyon Paneli */
+.simulation-panel {
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.mobile-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+.mobile-modal-close:hover {
+  color: #374151;
+}
+
+.simulation-option {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.simulation-option h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.simulation-description {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.predefined-barcodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 6px;
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.predefined-barcode {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-size: 12px;
+}
+
+.predefined-barcode:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.predefined-barcode.valid {
+  border-color: #10b981;
+}
+
+.predefined-barcode.invalid {
+  border-color: #ef4444;
+}
+
+.barcode-type {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.barcode-code {
+  font-size: 11px;
+  font-weight: 500;
+  color: #374151;
+  font-family: 'Courier New', monospace;
+  word-break: break-all;
+}
+
+.manual-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.manual-barcode-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+}
+
+.manual-barcode-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.simulation-error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Mobil Test Durumu */
+.mobile-test-status {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.mobile-test-status h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.test-phase, .test-step, .test-status {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.test-error {
+  font-size: 14px;
+  color: #dc2626;
+  font-weight: 500;
+  margin-top: 8px;
+  padding: 8px;
+  background: #fef2f2;
+  border-radius: 4px;
+  border-left: 4px solid #dc2626;
+}
+
+/* Mobil Test Butonları */
+.mobile-start-btn {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+.mobile-start-btn:hover:not(:disabled) {
+  background: #059669 !important;
+  border-color: #059669 !important;
+}
+
+.mobile-start-btn:disabled {
+  background: #9ca3af !important;
+  border-color: #9ca3af !important;
+  cursor: not-allowed;
+}
+
+.mobile-success-btn {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+.mobile-success-btn:hover {
+  background: #059669 !important;
+  border-color: #059669 !important;
+}
+
+.mobile-error-btn {
+  background: #ef4444 !important;
+  border-color: #ef4444 !important;
+}
+
+.mobile-error-btn:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+.mobile-reset-btn {
+  background: #6b7280 !important;
+  border-color: #6b7280 !important;
+}
+
+.mobile-reset-btn:hover {
+  background: #4b5563 !important;
+  border-color: #4b5563 !important;
+}
+

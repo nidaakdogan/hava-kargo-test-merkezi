@@ -1,0 +1,121 @@
+name: Air Cargo Digital Twin CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        cd mock-api
+        npm install
+    
+    - name: Start Mock API
+      run: |
+        cd mock-api
+        npm start &
+        sleep 10
+    
+    - name: Run API tests
+      run: |
+        curl -f http://localhost:3001/health
+        curl -f http://localhost:3001/api/stats
+    
+    - name: Stop Mock API
+      run: pkill -f "node server.js"
+
+  test-web:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        cd web-ui
+        npm install
+    
+    - name: Install Playwright
+      run: |
+        cd web-ui
+        npx playwright install --with-deps
+    
+    - name: Start Mock API
+      run: |
+        cd mock-api
+        npm install
+        npm start &
+        sleep 10
+    
+    - name: Run Web UI tests
+      run: |
+        cd web-ui
+        npm run test
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: web-test-results
+        path: web-ui/test-results/
+    
+    - name: Stop Mock API
+      run: pkill -f "node server.js"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [test-api, test-web]
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        cd web-ui
+        npm install
+    
+    - name: Build Web UI
+      run: |
+        cd web-ui
+        npm run build
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: web-ui-build
+        path: web-ui/dist/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - name: Deploy to production
+      run: |
+        echo "Deployment would happen here"
+        echo "Mock API: http://localhost:3001"
+        echo "Web UI: http://localhost:5173"

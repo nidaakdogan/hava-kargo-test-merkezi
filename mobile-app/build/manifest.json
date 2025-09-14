@@ -1,0 +1,93 @@
+{
+  "id": "/",
+  "name": "Hava Kargo Test Merkezi",
+  "short_name": "Hava Kargo Test Merkezi",
+  "description": "Hava Kargo Test Merkezi - Mobil Uygulama",
+  "version": "2.0.0",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0a4cff",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["logistics", "testing", "productivity"],
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Barkod Tarayıcı",
+      "short_name": "Barkod",
+      "description": "Hızlıca barkod tarama başlat",
+      "url": "/scan",
+      "icons": [
+        {
+          "src": "/icons/shortcut-barcode.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AWB Kabul",
+      "short_name": "AWB",
+      "description": "AWB kabul işlemi",
+      "url": "/awb",
+      "icons": [
+        {
+          "src": "/icons/shortcut-awb.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

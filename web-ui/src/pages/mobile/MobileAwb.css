@@ -1,0 +1,402 @@
+/* Mobile AWB Styles - ULD ile tam parite */
+
+/* Genel scroll ayarları */
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Floating Action Button'u gizle */
+.floating-action-button,
+.fab,
+[class*="fab"],
+[class*="floating"],
+[class*="action-button"] {
+  display: none !important;
+}
+
+/* Browser'ın kendi floating action button'larını gizle */
+[data-testid*="fab"],
+[aria-label*="floating"],
+[aria-label*="action"] {
+  display: none !important;
+}
+
+.mobile-awb {
+  padding: var(--mobile-spacing-lg); /* 16px - Ekran kenar boşluğu */
+  background: #f8f9fa;
+  min-height: 100vh;
+  /* Scroll davranışını düzelt */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mobile-card {
+  background: #ffffff;
+  border-radius: var(--mobile-radius-card); /* 16px */
+  padding: var(--mobile-padding-card); /* 16px */
+  margin-bottom: var(--mobile-spacing-lg); /* 16px - Bölüm arası boşluk */
+  box-shadow: var(--mobile-shadow-card); /* Yumuşak gölge */
+}
+
+.mobile-card-title {
+  font-size: var(--mobile-font-h2); /* 18px - Kart başlığı */
+  font-weight: var(--mobile-weight-h2); /* 600 */
+  line-height: var(--mobile-line-h2); /* 24px */
+  color: #374151;
+  margin: 0 0 var(--mobile-spacing-sm) 0; /* 8px - Başlık ile içerik arası */
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: var(--mobile-spacing-sm); /* 8px */
+}
+
+/* Header Card - Web ile aynı */
+.mobile-header-card {
+  text-align: center;
+}
+
+.mobile-header-card .mobile-card-title {
+  border-bottom: none;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.mobile-card-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* AWB Form Styles - Web ile aynı */
+.mobile-awb-form {
+  width: 100%;
+}
+
+.mobile-form-section {
+  margin-bottom: 24px;
+}
+
+.mobile-form-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-form-group {
+  margin-bottom: var(--mobile-spacing-md); /* 12px - Alanlar arası boşluk */
+}
+
+.mobile-form-label {
+  display: block;
+  font-size: var(--mobile-font-label); /* 14px - Alan etiketi */
+  font-weight: var(--mobile-weight-label); /* 600 */
+  line-height: var(--mobile-line-label); /* 20px */
+  color: #374151;
+  margin-bottom: var(--mobile-spacing-xs); /* 4px */
+}
+
+.mobile-form-label .required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.mobile-input {
+  width: 100%;
+  height: var(--mobile-height-input); /* 48px */
+  padding: 0 var(--mobile-padding-input); /* 12px yatay */
+  border: 1px solid #d1d5db;
+  border-radius: var(--mobile-radius-input); /* 12px */
+  font-size: var(--mobile-font-input); /* 16px - Girdi metni */
+  font-weight: var(--mobile-weight-input); /* 500 */
+  line-height: var(--mobile-line-input); /* 22px */
+  color: #374151;
+  background-color: white;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.mobile-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: var(--mobile-shadow-focus); /* 2px mavi focus ring */
+}
+
+.mobile-input.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.mobile-form-error {
+  font-size: var(--mobile-font-error); /* 12px - Hata metni */
+  font-weight: var(--mobile-weight-error); /* 600 */
+  line-height: var(--mobile-line-error); /* 16px */
+  color: #dc2626;
+  margin-top: var(--mobile-spacing-xs); /* 4px */
+  display: flex;
+  align-items: center;
+  gap: var(--mobile-spacing-xs); /* 4px */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.mobile-form-help {
+  font-size: var(--mobile-font-helper); /* 12px - Helper/açıklama */
+  font-weight: var(--mobile-weight-helper); /* 400 */
+  line-height: var(--mobile-line-helper); /* 16px */
+  color: #6b7280;
+  margin-top: var(--mobile-spacing-xs); /* 4px */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Dropdown Styles - Web ile aynı */
+.mobile-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.mobile-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-dropdown-item:hover {
+  background-color: #f9fafb;
+}
+
+.mobile-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-dropdown-code {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  min-width: 40px;
+}
+
+.mobile-dropdown-details {
+  flex: 1;
+}
+
+.mobile-dropdown-city {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.mobile-dropdown-country {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Advanced Fields Toggle */
+.mobile-form-toggle {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.mobile-form-toggle:hover {
+  background: #f3f4f6;
+}
+
+.mobile-form-toggle-icon {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.mobile-advanced-fields {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Form Actions */
+.mobile-form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-spacing-md); /* 12px - Butonlar arası boşluk */
+  margin-top: var(--mobile-spacing-2xl); /* 24px */
+}
+
+.mobile-btn {
+  padding: var(--mobile-padding-button); /* 16px 20px */
+  border-radius: var(--mobile-radius-button); /* 12px */
+  font-size: var(--mobile-font-input); /* 16px */
+  font-weight: var(--mobile-weight-label); /* 600 */
+  line-height: var(--mobile-line-input); /* 22px */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  height: var(--mobile-height-button); /* 48px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.mobile-btn-primary:hover {
+  background: #2563eb;
+}
+
+.mobile-btn-secondary {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #475569;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-btn-secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f1f5f9 0%, #d1d5db 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.mobile-btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-btn-outline {
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.mobile-btn-outline:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.mobile-btn-full {
+  width: 100%;
+}
+
+.mobile-btn:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+/* Toast Styles */
+.mobile-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 16px;
+  right: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-toast-success {
+  background: #10b981;
+}
+
+.mobile-toast-info {
+  background: #3b82f6;
+}
+
+.mobile-toast-error {
+  background: #ef4444;
+}
+
+.mobile-toast-warning {
+  background: #f59e0b;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .mobile-awb {
+    padding: 12px;
+  }
+  
+  .mobile-card {
+    padding: 12px;
+  }
+  
+  .mobile-form-actions {
+    gap: 8px;
+  }
+}
+
+/* Disabled option styling */
+.mobile-input option:disabled {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  font-style: italic;
+}
+
+/* Çok satırlı option'lar için satır aralığı */
+.mobile-input option {
+  line-height: 1.6; /* 2-4px artırıldı */
+  padding: 12px 16px; /* Dikey padding artırıldı */
+}

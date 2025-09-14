@@ -1,0 +1,395 @@
+﻿accordion-chevron
+accordion-content
+accordion-header
+accordion-item
+anomalies-content
+anomalies-empty
+anomalies-list
+anomalies-section
+anomaly-content
+anomaly-description
+anomaly-icon-new
+anomaly-info
+anomaly-item skeleton
+anomaly-item-new
+anomaly-title
+awb-container awb-desktop
+awb-container awb-mobile
+awb-form
+awb-form-container
+awb-header
+awb-page awb-form-container
+awb-subtitle
+awb-title
+barcode-badge
+barcode-card invalid
+barcode-card valid
+barcode-column
+barcode-column-description
+barcode-column-header
+barcode-column-title
+barcode-container
+barcode-description
+barcode-grid
+barcode-label
+brand-icon
+brand-text
+btn btn-danger
+btn btn-primary
+btn btn-secondary
+btn-dg
+btn-new
+btn-print
+cancel-btn
+cancel-test-btn
+capacity-bar
+capacity-bar-container
+capacity-bar-fill
+capacity-bar-label
+chart-card
+chart-content
+chart-description
+chart-empty
+chart-header
+chart-legend-inline
+charts-grid
+chart-subtitle
+chart-title
+chart-title-section
+chart-tooltip
+checkbox-label
+checkbox-option
+clear-confirmation
+clear-options
+close-btn
+connection-status
+copy-btn
+counter-display
+counter-grid
+counter-item
+counter-label
+counter-number
+counter-value
+cta-content
+dashboard-container
+dashboard-header-bar
+dashboard-main-title
+dashboard-subtitle
+dashboard-title-section
+desktop-cta
+detail-dot error
+detail-dot success
+detail-item error
+detail-item success
+detail-label
+detail-percentage
+detail-text
+detail-value
+dg-form
+distribution-chart
+donut-center
+donut-chart
+donut-details
+donut-segment
+donut-total
+empty-icon
+empty-message
+empty-state
+environment-info
+env-label
+env-value
+error
+error-description
+error-header
+error-icon
+error-item
+error-message
+errors-list
+error-time
+error-title
+field-help
+form-actions
+form-body
+form-container
+form-error
+form-grid desktop-grid
+form-grid mobile-grid
+form-group
+form-group form-group-wide
+form-group full-width
+form-header
+form-help
+form-helper-text
+form-helper-text info
+form-input
+form-label
+form-row
+form-row form-row-centered
+form-section
+form-section optional-section
+form-section required-section
+form-sections-container
+form-subtitle
+form-textarea
+form-title
+global-platform-filter
+header-controls
+helper-icon
+helper-text
+info-icon
+input-button
+input-field
+input-group
+input-row
+input-unit
+input-with-status
+input-with-unit
+kpi-breakdown
+kpi-card
+kpi-cards-grid
+kpi-description
+kpi-icon error
+kpi-icon info
+kpi-icon neutral
+kpi-icon success
+kpi-label
+kpi-value
+kpi-value error
+kpi-value info
+kpi-value success
+label-optional
+label-required
+legend-dot error
+legend-dot success
+legend-item
+legend-text
+loading-spinner
+log-level
+log-message
+logs-content
+logs-list
+logs-tabs
+log-timestamp
+main-content
+manual-input-section
+mobile-accordion-chevron
+mobile-accordion-content
+mobile-accordion-header
+mobile-accordion-item
+mobile-action-btn mobile-action-primary
+mobile-action-section
+mobile-advanced-fields
+mobile-awb
+mobile-awb-form
+mobile-btn mobile-btn-primary mobile-btn-full
+mobile-btn mobile-btn-secondary mobile-btn-full
+mobile-capacity-display
+mobile-capacity-percentage
+mobile-card
+mobile-card mobile-header-card
+mobile-card-subtitle
+mobile-card-title
+mobile-container
+mobile-control-stats
+mobile-dropdown-city
+mobile-dropdown-code
+mobile-dropdown-container
+mobile-dropdown-country
+mobile-dropdown-details
+mobile-dropdown-item
+mobile-dropdown-list
+mobile-dropdown-name
+mobile-dropdown-specs
+mobile-form-actions
+mobile-form-error
+mobile-form-error overflow-warning
+mobile-form-group
+mobile-form-help
+mobile-form-label
+mobile-form-section
+mobile-form-section-title
+mobile-form-toggle
+mobile-form-toggle-icon
+mobile-header
+mobile-input
+mobile-input readonly
+mobile-manual-barcode-input
+mobile-manual-error
+mobile-manual-input-group
+mobile-manual-section
+mobile-manual-test-btn btn btn-primary
+mobile-menu-close
+mobile-menu-header
+mobile-menu-overlay
+mobile-menu-title
+mobile-modal-body
+mobile-modal-btn mobile-modal-btn-danger
+mobile-modal-btn mobile-modal-btn-secondary
+mobile-modal-buttons
+mobile-modal-content
+mobile-modal-header
+mobile-modal-overlay
+mobile-modal-text
+mobile-modal-title
+mobile-navigation
+mobile-nav-links
+mobile-offline-indicator
+mobile-overload-warning
+mobile-page
+mobile-progress-bar
+mobile-progress-fill
+mobile-scenario-accordion
+mobile-scenario-section
+mobile-stat-box
+mobile-stat-number
+mobile-stat-title
+mobile-step-badge
+mobile-step-title
+mobile-sticky-cta
+mobile-tab-bar
+mobile-test-code
+mobile-test-left
+mobile-test-list
+mobile-test-section
+mobile-test-status
+mobile-title
+mobile-uld
+mobile-uld-form
+mobile-weight-display
+mobile-weight-unit
+modal-actions
+modal-backdrop
+modal-body
+modal-btn modal-btn-secondary
+modal-close
+modal-container
+modal-footer
+modal-header
+modal-message
+modal-overlay
+modal-title
+modal-warning
+more-anomalies
+nav
+nav-brand
+nav-center
+nav-container
+nav-left
+nav-links
+nav-right
+offline-note
+offline-warning
+optional-badge
+optional-fields
+option-content
+option-description
+option-title
+overflow-badge
+pending
+profile-button
+progress-actions
+progress-bar
+progress-container
+progress-fill
+progress-header
+progress-panel
+progress-panel-overlay
+progress-percentage
+progress-steps
+progress-summary
+radio-option
+refresh-btn
+required
+required-badge
+rotating
+run-id-text
+scenario-accordion
+section-header
+section-header collapsible
+section-title
+section-toggle
+skeleton
+skeleton skeleton-text long
+skeleton skeleton-text medium
+skeleton skeleton-text short
+spinner
+stat-item
+stat-item error
+stat-item success
+stat-label
+stats-card mobile-stats
+stats-card web-stats
+stats-content
+stats-header
+stats-title
+status-chip
+status-dot
+status-text
+stat-value
+step-badge
+step-check
+step-content
+step-error
+step-icon
+step-spinner
+step-status
+step-title
+success
+success-details
+success-modal
+summary-content
+summary-item
+summary-label
+summary-stats
+summary-title
+summary-value
+summary-value error
+summary-value success
+tab-icon
+tab-label
+tare-edit-container
+tare-edit-icon
+tare-edit-mode-icon cancel
+tare-edit-mode-icon save
+tare-edit-mode-icons
+test-logs-section
+test-progress-section
+test-run-actions
+test-run-controls
+test-run-header
+test-run-id
+test-run-panel
+test-run-title
+test-stats-cards
+test-stepper
+toast-action
+toast-action-btn
+toast-close
+toast-container
+toast-content
+toast-icon
+toast-message
+toast-text
+toast-title
+tooltip-content
+tooltip-date
+tooltip-dot error
+tooltip-dot success
+tooltip-label
+tooltip-stat error
+tooltip-stat success
+tooltip-stat total
+tooltip-stats
+tooltip-value
+total-label
+total-number
+trend-bar-container
+trend-bar-group
+trend-bars
+trend-chart
+trend-date
+trend-failed
+trend-numbers-label
+trend-passed
+trend-stacked-bar
+uld-page awb-form-container

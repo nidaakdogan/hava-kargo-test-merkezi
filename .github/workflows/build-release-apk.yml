@@ -1,0 +1,199 @@
+name: Build Release APK for Appium
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'cargo-mobile-native/**'
+      - '.github/workflows/build-release-apk.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'cargo-mobile-native/**'
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type (release/debug)'
+        required: false
+        default: 'release'
+
+env:
+  NODE_VERSION: '18'
+  JAVA_VERSION: '17'
+  NDK_VERSION: '26.1.10909125'
+  CMAKE_VERSION: '3.22.1'
+
+jobs:
+  build-android-apk:
+    name: Build Android Release APK
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: 'cargo-mobile-native/package-lock.json'
+
+      - name: Setup Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 34
+          build-tools: 34.0.0
+          ndk-version: ${{ env.NDK_VERSION }}
+          cmake-version: ${{ env.CMAKE_VERSION }}
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            cargo-mobile-native/android/.gradle
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}-
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: cargo-mobile-native/node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('cargo-mobile-native/package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
+
+      - name: Install npm dependencies
+        working-directory: cargo-mobile-native
+        run: npm ci
+
+      - name: Install Expo CLI
+        run: npm install -g @expo/cli@latest
+
+      - name: Setup Android environment variables
+        run: |
+          echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
+          echo "NDK_HOME=$ANDROID_SDK_ROOT/ndk/${{ env.NDK_VERSION }}" >> $GITHUB_ENV
+          echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/${{ env.NDK_VERSION }}" >> $GITHUB_ENV
+
+      - name: Run Expo prebuild
+        working-directory: cargo-mobile-native
+        run: |
+          expo prebuild --platform android --clear --non-interactive
+          
+      - name: Create local.properties
+        working-directory: cargo-mobile-native/android
+        run: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          echo "ndk.dir=$ANDROID_SDK_ROOT/ndk/${{ env.NDK_VERSION }}" >> local.properties
+
+      - name: Create gradle.properties
+        working-directory: cargo-mobile-native/android
+        run: |
+          cat > gradle.properties << EOF
+          org.gradle.jvmargs=-Xmx4096m -Dfile.encoding=UTF-8
+          android.useAndroidX=true
+          android.enableJetifier=true
+          android.ndkVersion=${{ env.NDK_VERSION }}
+          hermesEnabled=true
+          newArchEnabled=false
+          org.gradle.parallel=true
+          org.gradle.configureondemand=true
+          org.gradle.daemon=true
+          EOF
+
+      - name: Make gradlew executable
+        working-directory: cargo-mobile-native/android
+        run: chmod +x gradlew
+
+      - name: Build Release APK
+        working-directory: cargo-mobile-native/android
+        run: |
+          ./gradlew clean
+          ./gradlew :app:assembleRelease --stacktrace --info
+
+      - name: Extract APK info
+        id: apk_info
+        working-directory: cargo-mobile-native/android
+        run: |
+          # Extract package name from app.json
+          APP_PACKAGE=$(cat ../app.json | grep -o '"package": "[^"]*"' | cut -d'"' -f4)
+          echo "APP_PACKAGE=$APP_PACKAGE" >> $GITHUB_OUTPUT
+          echo "Package: $APP_PACKAGE"
+          
+          # Find the built APK
+          APK_PATH=$(find app/build/outputs/apk/release -name "*.apk" | head -1)
+          echo "APK_PATH=$APK_PATH" >> $GITHUB_OUTPUT
+          echo "APK Path: $APK_PATH"
+          
+          # Extract MainActivity from AndroidManifest
+          MAIN_ACTIVITY=$(grep -A 10 'android.intent.action.MAIN' app/src/main/AndroidManifest.xml | grep 'android:name' | head -1 | sed 's/.*android:name="\([^"]*\)".*/\1/')
+          # If relative, make it absolute
+          if [[ $MAIN_ACTIVITY == .* ]]; then
+            MAIN_ACTIVITY="${APP_PACKAGE}${MAIN_ACTIVITY}"
+          fi
+          echo "MAIN_ACTIVITY=$MAIN_ACTIVITY" >> $GITHUB_OUTPUT
+          echo "Main Activity: $MAIN_ACTIVITY"
+
+      - name: Rename APK for Appium
+        working-directory: cargo-mobile-native/android
+        run: |
+          APK_PATH="${{ steps.apk_info.outputs.APK_PATH }}"
+          cp "$APK_PATH" cargo-mobile-release.apk
+          ls -la cargo-mobile-release.apk
+
+      - name: Create Appium config file
+        run: |
+          cat > appium-config.json << EOF
+          {
+            "appPackage": "${{ steps.apk_info.outputs.APP_PACKAGE }}",
+            "appActivity": "${{ steps.apk_info.outputs.MAIN_ACTIVITY }}",
+            "apkFile": "cargo-mobile-release.apk",
+            "buildDate": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "gitCommit": "${{ github.sha }}",
+            "buildNumber": "${{ github.run_number }}"
+          }
+          EOF
+          cat appium-config.json
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: cargo-mobile-release-apk
+          path: |
+            cargo-mobile-native/android/cargo-mobile-release.apk
+            appium-config.json
+          retention-days: 30
+
+      - name: Upload build logs (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            cargo-mobile-native/android/app/build/reports/
+            cargo-mobile-native/android/app/build/outputs/logs/
+          retention-days: 7
+
+      - name: Build Summary
+        run: |
+          echo "## 🚀 Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package**: ${{ steps.apk_info.outputs.APP_PACKAGE }}" >> $GITHUB_STEP_SUMMARY  
+          echo "- **Main Activity**: ${{ steps.apk_info.outputs.MAIN_ACTIVITY }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **APK**: cargo-mobile-release.apk" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build Date**: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Git Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Metro Independent**: ✅ Yes" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📱 Appium Test Ready" >> $GITHUB_STEP_SUMMARY
+          echo "Bu APK doğrudan emülatöre yüklenip Appium testleri için kullanılabilir." >> $GITHUB_STEP_SUMMARY

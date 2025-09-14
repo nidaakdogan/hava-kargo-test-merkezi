@@ -1,0 +1,32 @@
+{
+  "platformName": "Android",
+  "platformVersion": "15",
+  "deviceName": "Android Emulator",
+  "automationName": "UiAutomator2",
+  "app": "C:\\Users\\NİDAA\\Cargo Digital Twin Test Lab\\appium-tests\\apk\\cargo-mobile-debug.apk",
+  "appPackage": "com.cargodigitaltwin.mobile.debug",
+  "appActivity": "com.cargodigitaltwin.mobile.MainActivity",
+  "appWaitActivity": "*.MainActivity",
+  "newCommandTimeout": 60,
+  "noReset": false,
+  "fullReset": false,
+  "autoGrantPermissions": true,
+  "skipUnlock": true,
+  "skipDeviceInitialization": false,
+  "skipServerInstallation": false,
+  "chromedriverExecutable": "",
+  "chromedriverChromeMappingFile": "",
+  "chromedriverDisableBuildCheck": false,
+  "chromedriverUseSystemExecutable": false,
+  "chromedriverAutoDownload": true,
+  "chromeOptions": {
+    "args": [
+      "--disable-web-security",
+      "--allow-running-insecure-content"
+    ]
+  },
+  "server": {
+    "host": "localhost",
+    "port": 4723
+  }
+}

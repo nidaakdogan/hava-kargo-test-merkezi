@@ -1,0 +1,63 @@
+{
+  "name": "cargo-mobile-app",
+  "version": "1.0.0",
+  "description": "Hava Kargo Test & Simülasyon Merkezi - Saha Operasyonları",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "mobile": "react-scripts start --port 3002",
+    "offline": "react-scripts start --port 3002 --offline",
+    "build:pwa": "npm run build && npm run optimize:pwa",
+    "optimize:pwa": "echo 'PWA build completed! Deploy to HTTPS server for full PWA features.'",
+    "serve:https": "npx serve -s build -l 3002 --ssl-cert ./ssl/cert.pem --ssl-key ./ssl/key.pem",
+    "dev:https": "set HTTPS=true && npm start",
+    "analyze": "npx webpack-bundle-analyzer build/static/js/*.js",
+    "test:pwa": "node test-pwa.js",
+    "lighthouse": "npx lighthouse ahttp://localhost:3000 --only-categories=pwa --output=html --output-path=./lighthouse-pwa-report.html"
+  },
+  "dependencies": {
+    "axios": "^1.3.0",
+    "expo": "^53.0.20",
+    "localforage": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-qr-scanner": "^1.0.0-alpha.11",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-signature-canvas": "^1.0.6",
+    "react-toastify": "^9.1.3",
+    "react-webcam": "^7.0.1",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^4.9.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "cargo",
+    "mobile",
+    "offline",
+    "barcode",
+    "scanning",
+    "field-operations"
+  ],
+  "author": "Cargo Digital Twin Team",
+  "license": "MIT"
+}

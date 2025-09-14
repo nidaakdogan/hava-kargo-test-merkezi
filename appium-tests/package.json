@@ -1,0 +1,32 @@
+{
+  "name": "air-cargo-appium-tests",
+  "version": "1.0.0",
+  "description": "Air Cargo Appium Mobile Tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 60000 tests/smoke-test.spec.js",
+    "test:e2e:android": "mocha --timeout 60000 --reporter spec tests/smoke-test.spec.js",
+    "test:runner": "node run-test.js",
+    "test:smoke": "mocha --timeout 60000 tests/smoke-test.spec.js",
+    "test:awb": "mocha --timeout 60000 tests/awb-mobile.spec.js",
+    "test:uld": "mocha --timeout 60000 tests/uld-mobile.spec.js",
+    "test:dg": "mocha --timeout 60000 tests/dg-mobile.spec.js",
+    "test:debug": "mocha --timeout 120000 --reporter spec tests/smoke-test.spec.js",
+    "test:webview": "mocha --timeout 90000 --reporter spec tests/webview-smoke.spec.js",
+    "test:run-flow": "mocha --timeout 120000 --reporter spec tests/run-test-flow.spec.js"
+  },
+  "dependencies": {
+    "appium": "^3.0.2",
+    "mocha": "^10.0.0",
+    "webdriverio": "^9.19.2"
+  },
+  "devDependencies": {
+    "@wdio/appium-service": "^8.0.0",
+    "@wdio/cli": "^9.19.2",
+    "@wdio/local-runner": "^9.19.2",
+    "@wdio/mocha-framework": "^8.0.0",
+    "@wdio/spec-reporter": "^8.0.0",
+    "appium-uiautomator2-driver": "^5.0.0",
+    "chai": "^6.0.1"
+  }
+}

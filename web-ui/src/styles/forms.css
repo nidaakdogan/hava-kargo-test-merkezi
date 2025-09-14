@@ -1,0 +1,2107 @@
+/**
+ * Forms Styles
+ * Professional CSS for Digital Twin Test Platform Forms
+ * 
+ * @version 1.0.0
+ * @author Cargo Digital Twin Team
+ */
+
+/* ==========================================================================
+   Modal Styles
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.modal-body {
+  padding: 20px 24px;
+}
+
+.status-value
+
+.status-value
+
+.modal-footer {
+  padding: 16px 24px 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   Form Containers
+   ========================================================================== */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ULD Form Container */
+
+
+/* ULD Hazır Sinyali */
+.uld-ready-signal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: #f0f9ff;
+  border: 2px solid #0ea5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #0369a1;
+  box-shadow: 0 2px 4px rgba(14, 165, 233, 0.1);
+}
+
+.uld-ready-signal .ready-icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.uld-ready-signal .ready-text {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.uld-ready-signal .ready-details {
+  font-size: 12px;
+  color: #0369a1;
+  opacity: 0.8;
+  margin-top: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+/* DG Form Container */
+
+
+/* AWB Form Container */
+.awb-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.awb-form-container .form-container {
+  max-width: 100%;
+}
+
+/* Dashboard Container */
+
+
+/* Dashboard specific styles */
+
+
+/* Web Barkod Test Simülatörü - Yeni Stiller */
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card.valid 
+
+.barcode-card.valid 
+
+.barcode-card.invalid 
+
+.barcode-card.invalid 
+
+.barcode-card:hover 
+
+.barcode-card.valid:hover 
+
+.barcode-card.invalid:hover 
+
+/* Input Group - Manuel Giriş */
+
+.input-field .form-input {
+  height: 44px;
+  border-radius: 12px;
+  font-size: 16px;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.2s ease;
+  width: 100%;
+  min-width: 420px;
+  box-sizing: border-box;
+}
+
+.input-field .form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-row-centered 
+
+/* Senaryo Adımları - Geniş Kutu */
+
+.accordion-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+
+/* Responsive */
+
+
+}
+
+.dashboard-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Scan Simulator Container */
+
+
+/* Mobile Responsive */
+.form-container.mobile,
+.uld-form-container.mobile,
+.dg-form-container.mobile,
+.awb-form-container.mobile,
+.dashboard-container.mobile,
+.scan-simulator-container
+
+/* Form Header */
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-header
+
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-title
+
+.form-subtitle {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.form-subtitle
+
+/* Form Body */
+.form-body {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-body
+
+/* Form */
+
+
+.uld-form
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.form-section
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-title
+
+/* Form Rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.form-row
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group
+
+/* Form Labels */
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-label
+
+.label-required {
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.label-optional {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Opsiyonel alanlar için özel stil - container'a opacity vermek yerine */
+.form-group:has(.label-optional) .form-label {
+  color: #374151; /* Normal label rengi */
+}
+
+.form-group:has(.label-optional) .form-helper-text {
+  color: #6b7280; /* Helper metin için muted renk */
+}
+
+.form-group:has(.label-optional) .form-input,
+.form-group:has(.label-optional) 
+
+/* Select elementleri için özel stil - opacity mirasını önle */
+
+/* Opsiyonel select'ler için */
+.form-group:has(.label-optional) 
+
+.form-group:has(.label-optional) .form-select option {
+  background-color: white;
+  color: #111827;
+}
+
+/* Calculation Rules */
+
+
+.calculation-rules h4 {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.calculation-rules ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.calculation-rules li {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 6px;
+  padding-left: 0;
+}
+
+.calculation-rules li:last-child {
+  margin-bottom: 0;
+}
+
+.calculation-rules strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Capacity Colors */
+
+
+.capacity-colors h5 {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.capacity-colors ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capacity-colors li {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.capacity-colors li:last-child {
+  margin-bottom: 0;
+}
+
+.color-indicator
+
+.color-indicator
+
+.color-indicator
+
+.color-indicator
+
+/* Field Visual Guide */
+
+
+.field-visual-guide h5 {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.field-visual-guide ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.field-visual-guide li {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field-visual-guide li:last-child {
+  margin-bottom: 0;
+}
+
+.field-indicator
+
+.field-indicator
+
+/* Mevcut Ağırlık Helper Stilleri - Tek Satır, Sabit Yükseklik */
+
+
+.current-weight-helper
+
+.current-weight-helper
+
+.current-weight-helper
+
+.current-weight-helper.error {
+  color: #dc2626; /* text-red-600 */
+}
+
+.current-weight-helper
+
+.helper-icon {
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.helper-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Kullanım Rozeti - Input içinde sağda overlay */
+
+
+/* Kapasite Aşım Rozeti */
+.overflow-badge {
+  color: #DC2626; /* Kırmızı metin */
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* Mevcut Ağırlık Input - Sabit genişlik */
+#currentWeight {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Input with unit wrapper */
+.input-with-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-unit input {
+  flex: 1;
+  padding-right: 35px; /* kg için yer bırak */
+}
+
+.input-unit {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Barkod Simülasyonu Stilleri */
+
+/* Kontrol Paneli */
+
+/* Status Kartları - Dashboard Style */
+
+/* Barkod Bölümleri */
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card.valid 
+
+.barcode-card.invalid 
+
+/* Manuel Giriş */
+
+
+.manual-input .form-input {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* Senaryo Adımları */
+
+/* Mobile Responsiveness */
+
+
+/* Kapasite Uyarı Seviyeleri */
+
+
+.capacity-helper
+
+.capacity-helper
+
+.capacity-helper
+
+.capacity-helper
+
+.capacity-helper 
+
+.capacity-helper 
+
+/* Progress Bar Uyarı Metni */
+
+
+.progress-warning-text
+
+.progress-warning-text
+
+.progress-warning-text
+
+.progress-warning-text
+
+/* Kullanım Etiketi */
+
+
+/* Tare Edit Icon */
+.tare-edit-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tare-edit-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.tare-edit-icon:hover {
+  color: #3b82f6;
+  background-color: #f3f4f6;
+}
+
+.tare-edit-icon
+
+.tare-edit-icon:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Tare Edit Mode Icons */
+.tare-edit-mode-icons {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.tare-edit-mode-icon {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.tare-edit-mode-icon.save {
+  color: #059669;
+  background-color: #d1fae5;
+}
+
+.tare-edit-mode-icon.save:hover {
+  background-color: #a7f3d0;
+}
+
+.tare-edit-mode-icon.cancel {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.tare-edit-icon.cancel:hover {
+  background-color: #fecaca;
+}
+
+.tare-edit-mode-icon:active {
+  transform: scale(0.95);
+}
+
+/* Form Inputs */
+.form-input,
+
+
+.form-input:focus,
+
+
+.form-input.error,
+.form-select.error {
+  border-color: #dc2626; /* Kırmızı border */
+  background-color: #fef2f2; /* Açık kırmızı arka plan */
+}
+
+.form-input.error:focus,
+.form-select.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-input.mobile,
+.form-select
+
+/* Pasif (readonly/disabled) alanlar için gri görünüm */
+.form-input:disabled,
+.form-input[readonly],
+.form-select:disabled,
+.form-select[readonly] {
+  background-color: #f3f4f6; /* Tailwind bg-gray-100 */
+  border-color: #e5e7eb; /* Tailwind border-gray-200 */
+  color: #6b7280; /* Tailwind text-gray-500 */
+  cursor: not-allowed;
+}
+
+.form-input:disabled:focus,
+.form-input[readonly]:focus,
+.form-select:disabled:focus,
+.form-select[readonly]:focus {
+  outline: none;
+  border-color: #e5e7eb;
+  box-shadow: none;
+}
+
+/* Aktif alanlar için focus stili */
+.form-input:not(:disabled):not([readonly]):focus,
+
+
+/* Mobile dropdown adjustments */
+.form-select
+
+/* Mobile ULD dropdown adjustments */
+.uld-form .form-select
+
+/* Dropdown Styling - Professional */
+
+/* ULD Form specific dropdown styling */
+.uld-form 
+
+.uld-form 
+
+.uld-form 
+
+/* Dropdown option styling */
+.form-select option {
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  background: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.form-select option:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.form-select option:checked {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.form-select option:focus {
+  background-color: #e5e7eb;
+  outline: none;
+}
+
+.form-select option:disabled {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  font-style: italic;
+}
+
+/* Çok satırlı option'lar için satır aralığı */
+.form-select option {
+  line-height: 1.6; /* 2-4px artırıldı */
+  padding: 12px 18px; /* Dikey padding artırıldı */
+}
+
+/* Custom dropdown arrow for better cross-browser support */
+
+/* Form Helper Text */
+.form-helper-text {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+  min-height: 16px;
+  transition: color 0.3s ease;
+}
+
+.form-helper-text
+
+/* Helper Text Color Coding */
+.form-helper-text.info {
+  color: #6b7280; /* Gri - normal bilgilendirme */
+}
+
+.form-helper-text.success {
+  color: #059669; /* Yeşil - başarılı durum */
+}
+
+.form-helper-text
+
+.form-helper-text.error {
+  color: #dc2626; /* Kırmızı - hata/limit aşıldı */
+}
+
+.form-helper-text
+
+/* Error Messages */
+.error-message {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+  min-height: 16px;
+}
+
+.error-message
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  padding: 20px 0;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 20px;
+}
+
+.form-actions
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 140px;
+  height: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  /* opacity kaldırıldı - tüm çocuklara miras oluyordu */
+  cursor: not-allowed;
+  background: #9ca3af;
+  color: white;
+  border-color: #9ca3af;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  border: 2px solid transparent;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Ripple Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Form Messages */
+
+
+.form-message.error {
+  background: #fefefe;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #ef4444;
+}
+
+.form-message.success {
+  background: #fefefe;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #10b981;
+}
+
+.form-message
+
+.form-message
+
+/* Capacity Warning Banner */
+
+
+.capacity-warning
+
+.capacity-warning
+
+.capacity-warning
+
+.capacity-warning
+
+/* Capacity Bar */
+.capacity-bar-container {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.capacity-bar {
+  width: 100%;
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.capacity-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e 0%, #eab308 50%, #ef4444 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.capacity-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+}
+
+.capacity-bar-label {
+  text-align: center;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Capacity Overflow Warning */
+
+
+/* Loading Spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scan Simulator Styles - DG Form Uyumlu */
+
+/* Sayaç Gösterimi */
+
+.counter-label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+/* Barkod Grid */
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card
+
+.barcode-card
+
+/* Test Senaryoları - Accordion */
+
+@keyframes accordionSlideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+}
+
+/* Responsive Design - DG Uyumlu */
+
+.scan-simulator h1 {
+  text-align: center;
+  color: #111827;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.scan-simulator 
+
+.control-panel h2 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.toggle-label input[type="checkbox"] {
+  display: none;
+}
+
+.test-barcodes h3 {
+  margin-top: 0;
+  color: #111827;
+    font-size: 20px;
+    margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.test-barcode-card
+
+.test-barcode-card
+
+.test-barcode-card
+
+.test-scenario h3 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.offline-queue-status h3 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+
+  
+  .form-header {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+  }
+  
+  .form-subtitle {
+    font-size: 14px;
+  }
+
+  .form-section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .btn {
+    min-width: 100%;
+    height: 44px;
+  font-size: 14px;
+  }
+  
+  .btn::before {
+    display: none; /* Mobilde ripple effect'i kapat */
+  }
+
+  .scan-simulator h1 {
+    font-size: 24px;
+  }
+  
+  .scan-simulator 
+  
+  .control-panel,
+  .test-barcodes,
+  .test-scenario,
+
+  /* Mobile dashboard adjustments */
+  .dashboard-container
+
+  /* Mobile input-with-status adjustments */
+  .input-with-status .form-input,
+  .input-with-status select {
+    height: 44px;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form-container {
+    max-width: 750px;
+  }
+  
+  .uld-form-container,
+  .dg-form-container,
+  .awb-form-container {
+    max-width: 650px;
+  }
+
+  .form-row {
+    gap: 20px;
+  }
+  
+  .btn {
+    min-width: 130px;
+  }
+  
+  /* Tablet dropdown adjustments */
+  
+  
+  /* Tablet ULD dropdown adjustments */
+  .uld-form 
+  
+  /* Tablet dashboard adjustments */
+
+}
+
+/* Input with Status - Professional styling */
+.input-with-status {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-status .form-input,
+.input-with-status select {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.input-with-status .form-input:focus,
+.input-with-status select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-with-status .form-input.error,
+.input-with-status select.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* Dashboard Title - Right aligned, single line */
+
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+/* Professional Date Picker Styles */
+
+.date-picker::-webkit-datetime-edit-month-field,
+.date-picker::-webkit-datetime-edit-day-field,
+
+/* Firefox Date Picker */
+
+
+/* Mobile Date Picker Adjustments */
+
+
+/* AWB Form Specific Styles */
+.awb-form-container .btn {
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.awb-form-container .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.awb-form-container .btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+}
+
+.awb-form-container .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.awb-form-container .btn-secondary {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.awb-form-container .btn-secondary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #d1d5db 100%);
+  border-color: #94a3b8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.awb-form-container .btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Actions - Compact Layout */
+.awb-form-container .form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Success Modal Buttons */
+.awb-form-container .btn-dg,
+.awb-form-container .btn-print,
+.awb-form-container .btn-new {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  margin: 0 8px;
+}
+
+.awb-form-container .btn-dg {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.awb-form-container .btn-print {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.awb-form-container .btn-new {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .awb-form-container {
+    max-width: 100%;
+    padding: 16px;
+  }
+  
+  .awb-form-container .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .awb-form-container .btn {
+    min-width: 100%;
+    height: 48px;
+  }
+}
+
+/* ULD Form Specific Styles - Same as AWB */
+
+
+.uld-form-container .form-container {
+  max-width: 100%;
+}
+
+/* DG Form Specific Styles - Same as AWB */
+
+
+.dg-form-container .form-container {
+  max-width: 100%;
+}
+
+/* Professional Button Styles for ULD and DG (Same as AWB) */
+.uld-form-container .btn,
+.dg-form-container .btn {
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.uld-form-container .btn-primary,
+.dg-form-container .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.uld-form-container .btn-primary:hover,
+.dg-form-container .btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+}
+
+.uld-form-container .btn-primary:active,
+.dg-form-container .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.uld-form-container .btn-secondary,
+.dg-form-container .btn-secondary {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.uld-form-container .btn-secondary:hover,
+.dg-form-container .btn-secondary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #d1d5db 100%);
+  border-color: #94a3b8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.uld-form-container .btn-secondary:active,
+.dg-form-container .btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Actions - Compact Layout for ULD and DG */
+.uld-form-container .form-actions,
+.dg-form-container .form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Responsive Adjustments for ULD and DG */
+
+  
+  .uld-form-container .form-actions,
+  .dg-form-container .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .uld-form-container .btn,
+  .dg-form-container .btn {
+    min-width: 100%;
+    height: 48px;
+  }
+}
+
+/* ULD Form Disabled Button - Passive (Grey) */
+.uld-form-container 
+
+.uld-form-container 
+
+.uld-form-container 
+
+/* ScanSimulator Specific Styles - Same as AWB/ULD/DG */
+
+
+.scan-simulator-container .form-container {
+  max-width: 100%;
+}
+
+/* Professional Button Styles for ScanSimulator */
+.scan-simulator-container .btn {
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-simulator-container .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.scan-simulator-container .btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+}
+
+.scan-simulator-container .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.scan-simulator-container .btn-secondary {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scan-simulator-container .btn-secondary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #d1d5db 100%);
+  border-color: #94a3b8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.scan-simulator-container .btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Actions - Compact Layout for ScanSimulator */
+.scan-simulator-container .form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Test Barcode Cards */
+
+.test-barcode-card
+
+.test-barcode-card
+
+.test-barcode-card
+
+/* Scenario Steps */
+
+/* Queue Container */
+
+.queue-item 
+
+.queue-item 
+
+/* Responsive Adjustments for ScanSimulator */
+
+  
+  .scan-simulator-container .btn {
+    min-width: 100%;
+    height: 48px;
+  }
+
+}
+
+/* ULD Form - Auto-calculated fields styling */
+.uld-form-container .form-input[readonly],
+.uld-form-container .form-input[disabled] {
+  background-color: #f9fafb;
+  color: #6b7280;
+  border-color: #d1d5db;
+  cursor: not-allowed;
+  /* opacity kaldırıldı - tüm çocuklara miras oluyordu */
+}
+
+.uld-form-container .form-input[readonly]:focus,
+.uld-form-container .form-input[disabled]:focus {
+  outline: none;
+  border-color: #d1d5db;
+  box-shadow: none;
+}
+
+/* ULD Form - Helper text colors */
+.uld-form-container .form-helper-text.info {
+  color: #6b7280;
+}
+
+.uld-form-container .form-helper-text.success {
+  color: #059669;
+}
+
+.uld-form-container .form-helper-text
+
+.uld-form-container .form-helper-text.error {
+  color: #dc2626;
+}
+
+.uld-form-container .form-helper-text
+
+.uld-form-container .form-helper-text
+
+/* ScanSimulator - Professional Form Structure */
+
+
+.scan-simulator-container .form-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Control Panel */
+
+
+.control-panel h2 {
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* Mode Control - Simple Toggle Design */
+
+.toggle-container input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-container input:checked + .toggle-switch 
+
+.toggle-container input:checked + .toggle-switch 
+
+/* Mobile Responsive for Mode Control */
+
+
+/* Buton Stilleri - Standardizasyon */
+
+
+.btn-outline.btn-secondary {
+  border-color: #6b7280;
+  color: #6b7280;
+}
+
+.btn-outline.btn-secondary:hover:not(:disabled) {
+  background: #6b7280;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-outline
+
+.btn-outline
+
+/* Collapsible Senaryo Adımları */
+
+.collapse-icon
+
+.scenario-steps
+
+.scenario-steps
+
+/* Button Group */
+
+
+.button-group .btn {
+  flex: 1;
+  min-width: 140px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-group .btn:disabled {
+  /* opacity kaldırıldı - tüm çocuklara miras oluyordu */
+  cursor: not-allowed;
+  background: #f3f4f6;
+  color: #9ca3af;
+  border-color: #d1d5db;
+}
+
+/* Queue Status */
+
+/* Test Barcodes */
+
+
+.test-barcodes h3 {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+.barcode-item
+
+/* Scenario Steps */
+
+
+.scenario-steps h3 {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+
+/* Responsive Design */
+
+  .button-group .btn {
+    min-width: auto;
+  }
+
+}
+
+/* Barkod Simülasyonu - AWB/ULD ile Aynı Boyutlar */
+
+
+.scan-simulator 
+
+.scan-simulator .form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scan-simulator .form-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.scan-simulator .form-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.scan-simulator 
+
+.scan-simulator .form-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.scan-simulator .form-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.scan-simulator .section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator .barcode-card
+
+.scan-simulator .barcode-card
+
+.scan-simulator .barcode-card
+
+.scan-simulator .barcode-card
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator .form-input {
+  height: 48px;
+  padding: 0 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.scan-simulator .form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.scan-simulator 
+
+/* Manuel Giriş Bölümü - Ortalanmış Tasarım */
+.scan-simulator 
+
+.scan-simulator .manual-input-section .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scan-simulator .manual-input-section .form-label {
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.scan-simulator .scenario-header,
+.scan-simulator 
+
+.scan-simulator 
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator 
+
+.scan-simulator .step-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.scan-simulator .step-content p {
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+
+  
+  .scan-simulator 
+  
+  .scan-simulator 
+  
+  .scan-simulator 
+  
+  .scan-simulator 
+  
+  .scan-simulator 
+  
+  .scan-simulator .form-help,
+  .scan-simulator 
+  
+  .scan-simulator 
+}
+
+/* Tümünü Temizle Modal Stilleri */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-container {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-primary);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-bottom: 1px solid var(--border-primary);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modal-body {
+  padding: var(--spacing-xl);
+}
+
+.modal-description p {
+  margin: 0;
+  color: #92400e;
+  font-weight: 500;
+}
+
+/* Radio Group Stilleri */
+
+.radio-item input[type="radio"] {
+  margin: 0;
+  margin-top: 2px;
+  accent-color: var(--accent-primary);
+}
+
+.radio-label strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.radio-label small {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Temizleme İlerleme Çubuğu */
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-top: 1px solid var(--border-primary);
+  background: var(--bg-secondary);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-container {
+    max-height: 95vh;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: var(--spacing-md);
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+  }
+}
+
+/* Tümünü Temizle Modal - Dashboard'dan taşınan stiller */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-container {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modal-body {
+  padding: 0 24px 24px 24px;
+}
+
+.radio-option input[type="radio"] {
+  margin: 0;
+  margin-top: 2px;
+}
+
+.radio-option input[type="radio"]:checked + 
+
+.checkbox-option input[type="checkbox"] {
+  margin: 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px;
+  border-top: 1px solid #E5E7EB;
+  background: #F8FAFC;
+  border-radius: 0 0 12px 12px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #F8FAFC;
+  color: #64748B;
+  border-color: #E5E7EB;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #F1F5F9;
+  color: var(--text-primary);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-container {
+    margin: 20px;
+    max-width: none;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}

@@ -1,0 +1,23 @@
+# APK Directory for Appium Tests
+
+## Place your APK file here:
+- cargo-mobile-debug.apk
+
+## Expected file structure:
+```
+appium-tests/
+  apk/
+    cargo-mobile-debug.apk  ← Your built APK goes here
+  config/
+    android-emulator.config.js
+  tests/
+    smoke-test.spec.js
+```
+
+## APK Build Command:
+```bash
+cd ../cargo-mobile-native
+npm run build:android:development
+# or
+eas build --platform android --profile development --local
+```

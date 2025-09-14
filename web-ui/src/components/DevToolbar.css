@@ -1,0 +1,103 @@
+/* DevToolbar - Sadece development'da görünür */
+.dev-toolbar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000; /* Toast'lardan yüksek */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dev-toolbar-toggle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1f2937;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.dev-toolbar-toggle:hover {
+  background: #374151;
+  transform: scale(1.1);
+}
+
+.dev-toolbar-panel {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dev-toolbar-panel h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dev-toolbar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dev-btn {
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.dev-btn:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.dev-toolbar-info {
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.dev-toolbar-info small {
+  color: #6b7280;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* Production'da tamamen gizle - Son çare güvenlik ağı */
+@media (min-width: 0) {
+  .dev-toolbar,
+  .dev-toolbar-toggle,
+  .dev-toolbar-panel,
+  .dev-btn {
+    display: none !important;
+  }
+}
+
+/* Development'da göster (NODE_ENV kontrolü CSS'de yapılamaz) */

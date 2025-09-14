@@ -1,0 +1,291 @@
+/* Toast Container - Alt-Sağ (Desktop) */
+.toast-container {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 950; /* Z-index hiyerarşisi: toast 950 */
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  max-width: 360px;
+  pointer-events: none; /* Container tıklamayı engellemez */
+}
+
+/* Mobile Toast Position - Alt-Sağ (responsive) */
+@media (max-width: 640px) {
+  .toast-container {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    max-width: none;
+    width: calc(100% - 24px);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
+
+/* Individual Toast - Spesifikasyon uyumlu */
+.toast {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  pointer-events: auto; /* Sadece toast kartı tıklanabilir */
+  transform: translateX(0);
+  transition: transform 300ms ease-out;
+  max-width: 100%;
+  min-width: 280px;
+  position: relative;
+  opacity: 1;
+}
+
+.toast.toast-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast.toast-hidden {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.toast:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateX(0) translateY(-2px);
+}
+
+.toast-visible {
+  transform: translateX(0);
+}
+
+.toast-hidden {
+  transform: translateX(0) translateY(-10px);
+  opacity: 0;
+}
+
+/* Toast Content - Spesifikasyon uyumlu */
+.toast-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+  position: relative;
+}
+
+/* Sol kenar durum çubuğu */
+.toast::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 12px 0 0 12px;
+}
+
+.toast-success::before {
+  background: #10B981;
+}
+
+.toast-warning::before {
+  background: #F59E0B;
+}
+
+.toast-error::before {
+  background: #EF4444;
+}
+
+.toast-info::before {
+  background: #2563EB;
+}
+
+.toast-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.toast-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111827 !important;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+  /* 2 satırdan fazlası ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.toast-message {
+  font-size: 14px;
+  color: #374151 !important;
+  line-height: 1.4;
+  font-weight: 400;
+  /* 2 satırdan fazlası ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  line-height: 1;
+  /* Klavye erişimi için */
+  outline: none;
+}
+
+.toast-close:hover {
+  background: #f3f4f6;
+  color: #6b7280;
+  transform: scale(1.1);
+}
+
+.toast-close:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Toast Actions */
+.toast-action {
+  padding: 0 16px 16px 16px;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 8px;
+}
+
+.toast-action-btn {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toast-action-btn:hover {
+  background: #f8fafc;
+  color: #1d4ed8;
+}
+
+/* Toast Types - Spesifikasyon renkleri */
+.toast-success {
+  background: #ffffff !important;
+}
+
+.toast-success .toast-icon {
+  color: #10B981;
+}
+
+.toast-warning {
+  background: #ffffff !important;
+}
+
+.toast-warning .toast-icon {
+  color: #F59E0B;
+}
+
+.toast-error {
+  background: #ffffff !important;
+}
+
+.toast-error .toast-icon {
+  color: #EF4444;
+}
+
+.toast-info {
+  background: #ffffff !important;
+}
+
+.toast-info .toast-icon {
+  color: #2563EB;
+}
+
+/* Sticky Toast */
+.toast-sticky {
+  border-left-width: 4px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.toast-sticky .toast-close {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Hover'da duraklatma için */
+.toast-paused {
+  animation-play-state: paused;
+}
+
+/* Maks 3 toast için animasyon gecikmeleri */
+/* Animation delay kuralları kaldırıldı - 1sn kaybolma sorununu önlemek için */
+
+/* Çok küçük ekranlar için */
+@media (max-width: 480px) {
+  .toast-container {
+    left: 12px !important;
+    right: 12px !important;
+    max-width: calc(100vw - 24px);
+  }
+  
+  .toast {
+    min-width: auto;
+    max-width: 100%;
+  }
+  
+  .toast-content {
+    padding: 14px;
+  }
+  
+  .toast-title {
+    font-size: 14px;
+  }
+  
+  .toast-message {
+    font-size: 13px;
+  }
+}
+
+/* Erişilebilirlik - Screen reader için */
+.toast-container[aria-live="polite"] {
+  /* Screen reader'lar mesajı okur, odağı çalmaz */
+  position: relative;
+}
+
+/* Klavye erişimi */
+.toast-close:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animasyon performansı */
+.toast {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}

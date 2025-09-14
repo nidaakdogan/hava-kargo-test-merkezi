@@ -1,0 +1,27 @@
+{
+  "name": "air-cargo-mock-api",
+  "version": "1.0.0",
+  "description": "Hava Kargo Test & Simülasyon Merkezi - Mock API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "curl -X POST http://localhost:3001/api/seed",
+    "reset": "curl -X POST http://localhost:3001/api/reset",
+    "health": "curl http://localhost:3001/health"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-cron": "^3.0.3",
+    "selenium-webdriver": "^4.35.0",
+    "socket.io": "^4.7.5",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
